@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "741235221007",
+    "project_id": "react-native-test-30d20",
+    "storage_bucket": "react-native-test-30d20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741235221007:android:effad4506501f0a02bf97a",
+        "android_client_info": {
+          "package_name": "com.pushnotification_notifee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741235221007-9esbe0q0sp140ckcjti3lk2u91uoauku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pushnotification_notifee",
+            "certificate_hash": "f55325271dca4330ea97eb46bec941ecc39568a2"
+          }
+        },
+        {
+          "client_id": "741235221007-a6akc5s81pvn7igdrlt5e7m6cn7kh36d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd_12Vba5HveiY-GZp-FC8U1gkHuX06Ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741235221007-a6akc5s81pvn7igdrlt5e7m6cn7kh36d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "741235221007-7b8ti3u1kt74hj96r2sdbndebpsb0je1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.base-project"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
