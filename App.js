@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
 import {Button, StyleSheet, View, Alert} from 'react-native';
-import notifee from '@notifee/react-native';
+import notifee, {AndroidImportance} from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 
 const App = () => {
   useEffect(() => {
+    getFcmToken();
     requestUserPermission();
     const unsubscribe = messaging().onMessage(async remoteMessage => {
       console.log('remoteMessage', JSON.stringify(remoteMessage));
@@ -19,11 +20,21 @@ const App = () => {
     const authStatus = await messaging().requestPermission();
   };
 
+  const getFcmToken = async () => {
+    await messaging()
+      .getToken()
+      .then(token => {
+        console.log('fcm token ', token);
+      });
+  };
+
   async function displayNotification(remoteMessage) {
     // Create a channel
     const channelId = await notifee.createChannel({
       id: 'default',
       name: 'Default Channel',
+      badge: true,
+      importance: AndroidImportance.HIGH,
     });
 
     // Display a notification
@@ -32,7 +43,10 @@ const App = () => {
       body: remoteMessage?.notification?.body,
       android: {
         channelId,
-        smallIcon: 'ic_launcher', // optional, defaults to 'ic_launcher'.
+        // Reference the name created (Optional, defaults to 'ic_launcher')
+        smallIcon: 'ic_small_icon',
+        // Set color of icon (Optional, defaults to white)
+        // color: '#9c27b0',
       },
     });
   }
