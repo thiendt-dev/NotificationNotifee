@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@notifee/react-native": "3.0.4",
+    "@react-native-community/push-notification-ios": "^1.10.1",
     "@react-native-firebase/app": "^14.5.1",
     "@react-native-firebase/messaging": "^14.5.1",
     "react": "17.0.2",
-    "react-native": "0.67.4"
+    "react-native": "0.67.4",
+    "react-native-code-push": "^7.0.4",
+    "react-native-push-notification": "^8.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

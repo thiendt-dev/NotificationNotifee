@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PushNotification_Notifee</string>
+      <string moduleConfig="true" name="CodePushDeploymentKey">3E8uZIN9auwvFIObz8PLEkDK63oMrR_kYKv8q</string>
 </resources>
