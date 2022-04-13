@@ -14,6 +14,7 @@
 		2A1AD76E659F36B541046D21 /* libPods-PushNotification_Notifee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FED81D64E21C358C26ADD /* libPods-PushNotification_Notifee.a */; };
 		68D11F1C46BFDA4554C79A7D /* libPods-PushNotification_Notifee-PushNotification_NotifeeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB60F20D9D4F032E3A06FF7A /* libPods-PushNotification_Notifee-PushNotification_NotifeeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C86B2D81987744769A479961 /* Updock-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B3D05B036FD441F91BF8BC7 /* Updock-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,12 @@
 		21B6E24A90F0B4BC903BA4EB /* Pods-PushNotification_Notifee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification_Notifee.release.xcconfig"; path = "Target Support Files/Pods-PushNotification_Notifee/Pods-PushNotification_Notifee.release.xcconfig"; sourceTree = "<group>"; };
 		76AE1631F559A2965E187DD0 /* Pods-PushNotification_Notifee-PushNotification_NotifeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification_Notifee-PushNotification_NotifeeTests.release.xcconfig"; path = "Target Support Files/Pods-PushNotification_Notifee-PushNotification_NotifeeTests/Pods-PushNotification_Notifee-PushNotification_NotifeeTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PushNotification_Notifee/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		844C552627EC4FAF00006024 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CB60F20D9D4F032E3A06FF7A /* libPods-PushNotification_Notifee-PushNotification_NotifeeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PushNotification_Notifee-PushNotification_NotifeeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D57F79BC44882306458960 /* Pods-PushNotification_Notifee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification_Notifee.debug.xcconfig"; path = "Target Support Files/Pods-PushNotification_Notifee/Pods-PushNotification_Notifee.debug.xcconfig"; sourceTree = "<group>"; };
 		E96677A01E2419555C596104 /* Pods-PushNotification_Notifee-PushNotification_NotifeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification_Notifee-PushNotification_NotifeeTests.debug.xcconfig"; path = "Target Support Files/Pods-PushNotification_Notifee-PushNotification_NotifeeTests/Pods-PushNotification_Notifee-PushNotification_NotifeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		9B3D05B036FD441F91BF8BC7 /* Updock-Regular.ttf */ = {isa = PBXFileReference; name = "Updock-Regular.ttf"; path = "../src/assets/fonts/Updock-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +119,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				844C552627EC4FAF00006024 /* Config.xcconfig */,
 				13B07FAE1A68108700A75B9A /* PushNotification_Notifee */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PushNotification_NotifeeTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				B7EC334B714830604115FED6 /* Pods */,
+				897DCB1C96A143308FB80065 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,9 +150,17 @@
 				E96677A01E2419555C596104 /* Pods-PushNotification_Notifee-PushNotification_NotifeeTests.debug.xcconfig */,
 				76AE1631F559A2965E187DD0 /* Pods-PushNotification_Notifee-PushNotification_NotifeeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		897DCB1C96A143308FB80065 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				9B3D05B036FD441F91BF8BC7 /* Updock-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -246,6 +259,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C86B2D81987744769A479961 /* Updock-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +558,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 844C552627EC4FAF00006024 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;

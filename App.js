@@ -6,14 +6,27 @@ import {
   Alert,
   TouchableOpacity,
   Text,
+  StatusBar,
+  SafeAreaView,
 } from 'react-native';
 import notifee, {AndroidImportance, EventType} from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 import {localNotificationService} from './src/library/utils/firebase/LocalNotificationService';
 import {fcmService} from './src/library/utils/firebase/FCMService';
 import codePush from 'react-native-code-push';
+import {RootNavigator} from './src/navigation/RootNavigator';
+import AppNavigation from './src/navigation/AppNavigation';
+import {LogBox} from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
-let codePushOptions = {checkFrequency: codePush.CheckFrequency.MANUAL};
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
+  'Remote debugger',
+]);
+
+let codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.MANUAL,
+};
 const App = () => {
   const onButtonPress = () => {
     codePush.sync({
@@ -26,6 +39,7 @@ const App = () => {
     onButtonPress();
     getFcmToken();
     requestUserPermission();
+    SplashScreen.hide();
     // const unsubscribe = messaging().onMessage(async remoteMessage => {
     //   console.log('remoteMessage', JSON.stringify(remoteMessage));
     //   displayNotification(remoteMessage);
@@ -48,7 +62,7 @@ const App = () => {
 
     // return unsubscribe;
     // fcmService.registerAppWithFCM();
-    fcmService.register(onRegister, onNotification, onOpenNotification);
+    // fcmService.register(onRegister, onNotification, onOpenNotification);
 
     localNotificationService.configure(onOpenNotification);
 
@@ -157,19 +171,12 @@ const App = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <Button
-        title="Display Notification"
-        onPress={() => localDisplayNotification()}
-      />
-      <Button
-        title="Display Notification"
-        onPress={() => localDisplayNotification()}
-      />
-      <Button
-        title="Check for updates"
-        onPress={() => onButtonPress()}></Button>
-    </View>
+    <>
+      <SafeAreaView>
+        <StatusBar backgroundColor={'#fff'} barStyle="dark-content" />
+      </SafeAreaView>
+      <AppNavigation />
+    </>
   );
 };
 
